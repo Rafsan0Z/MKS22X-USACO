@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 public class USACO{
 // These fields are for the Bronze Problem
   private int row;
@@ -9,7 +12,7 @@ public class USACO{
   \* This section is only for the Bronze problem *\
 
   public static void takeinputs(String filename){
-    
+
   }
 
 
