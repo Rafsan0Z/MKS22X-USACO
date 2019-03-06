@@ -7,7 +7,7 @@ public class USACO{
   private int width;
   private int Elevation;
   private int[][] field;
-  private int[] cow;
+  private int[][] commands;
 // These fields are for the Silver Problem
 
   \* This section is only for the Bronze problem *\
@@ -25,6 +25,10 @@ public class USACO{
     while(puzzle.hasNextLine()){
       String line = puzzle.nextLine();
       System.out.println(line);
+  }
+
+  public int FindMountain(){
+
   }
 
   public void createRegion(int row, int col){
