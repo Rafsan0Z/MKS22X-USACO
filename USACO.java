@@ -7,6 +7,7 @@ public class USACO{
   private int col;
   private int Elevation;
   private int[][] field;
+  private int[] cow;
 // These fields are for the Silver Problem
 
   \* This section is only for the Bronze problem *\
@@ -19,8 +20,12 @@ public class USACO{
       System.out.println(line);
   }
 
-  public boolean Stomp(int row, int col, int[] field){
+  public void createRegion(int row, int col){
     
+  }
+
+  public boolean Stomp(int row, int col, int[] region){
+
   }
 }
 
