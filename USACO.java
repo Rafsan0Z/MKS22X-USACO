@@ -32,6 +32,7 @@ public class USACO{
     for(int i = 0, j = 0; i < length && j < width; i = j+1, j++){
       if(field[[i][j] > Elevation){field[i][j] = 0;}
       else{field[i][j] = Elevation - field[i][j];}
+      volume += field[i][j]*72*72;
     }
     return volume;
   }
