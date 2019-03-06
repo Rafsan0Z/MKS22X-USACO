@@ -18,6 +18,10 @@ public class USACO{
       String line = puzzle.nextLine();
       System.out.println(line);
   }
+
+  public boolean Stomp(int row, int col, int[] field){
+    
+  }
 }
 
 
