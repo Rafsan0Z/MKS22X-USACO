@@ -3,8 +3,8 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 public class USACO{
 // These fields are for the Bronze Problem
-  private int row;
-  private int col;
+  private int length;
+  private int width;
   private int Elevation;
   private int[][] field;
   private int[] cow;
@@ -29,7 +29,7 @@ public class USACO{
   }
 
   public static int ProblemBronze(){
-    
+
   }
 }
 
