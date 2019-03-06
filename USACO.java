@@ -9,6 +9,8 @@ public class USACO{
   private int[][] field;
   private int[][] commands;
 // These fields are for the Silver Problem
+  private int Length;
+  private int Width;
 
   \* This section is only for the Bronze problem *\
 
@@ -57,10 +59,6 @@ public class USACO{
     return getVolume();
   }
 }
-
-
-
-
 
   \* End of Bronze Problem *\
 
