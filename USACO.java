@@ -2,10 +2,13 @@ public class USACO{
   private int row;
   private int col;
   private int Elevation;
-  private int[][] instructions;
+  private int[][] field;
 
   \* This section is only for the Bronze problem *\
 
+  public static void takeinputs(String filename){
+
+  }
 
 
 
