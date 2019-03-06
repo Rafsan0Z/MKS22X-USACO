@@ -53,6 +53,7 @@ public class USACO{
 
   public static int ProblemBronze(String inputFile){
     takeinputs(inputFile);
+    return getVolume();
   }
 }
 
