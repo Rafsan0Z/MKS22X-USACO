@@ -64,10 +64,14 @@ public class USACO{
 
   \* This section is only for the Silver problem *\
 
+  public static void TakeInputs(){
+
+  }
 
 
-
-
+  public static int ProblemSilver(String inputFile){
+    TakeInputs(inputFile);
+  }
 
   \* End of Silver Problem *\
 
