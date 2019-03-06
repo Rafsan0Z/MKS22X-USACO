@@ -27,8 +27,14 @@ public class USACO{
       System.out.println(line);
   }
 
-  public int FindMountain(){
+  public int getVolume(){
+    
+  }
 
+  public int FindMountain(){
+    for(int i = 0, j = 0; i < commands.length && j < commands[0].length; i = j+1, j++){
+      int peak = field[commands[i][j]]
+    }
   }
 
   public void createRegion(int row, int col){
