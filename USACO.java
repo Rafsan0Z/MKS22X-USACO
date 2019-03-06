@@ -12,8 +12,13 @@ public class USACO{
   \* This section is only for the Bronze problem *\
 
   public static void takeinputs(String filename){
-
+    File text = new File(filename);
+    Scanner puzzle = new Scanner(text);
+    while(puzzle.hasNextLine()){
+      String line = puzzle.nextLine();
+      System.out.println(line);
   }
+}
 
 
 
