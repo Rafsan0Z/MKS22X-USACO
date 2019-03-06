@@ -28,7 +28,12 @@ public class USACO{
   }
 
   public int getVolume(){
-    
+    int volume = 0;
+    for(int i = 0, j = 0; i < length && j < width; i = j+1, j++){
+      if(field[[i][j] > Elevation){field[i][j] = 0;}
+      else{field[i][j] = Elevation - field[i][j];}
+    }
+    return volume;
   }
 
   public int FindMountain(){
