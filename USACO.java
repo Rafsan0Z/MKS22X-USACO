@@ -18,6 +18,10 @@ public class USACO{
     length = puzzle.nextInt();
     width = puzzle.nextInt();
     Elevation = puzzle.nextInt();
+    field = new int[length][width];
+    for(int i = 0, j = 0; i < length && j < width; i = j+1, j++){
+      field[i][j] = puzzle.nextInt();
+    }
     while(puzzle.hasNextLine()){
       String line = puzzle.nextLine();
       System.out.println(line);
