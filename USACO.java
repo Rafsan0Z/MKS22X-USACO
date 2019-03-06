@@ -21,11 +21,15 @@ public class USACO{
   }
 
   public void createRegion(int row, int col){
-    
+
   }
 
   public boolean Stomp(int row, int col, int[] region){
 
+  }
+
+  public static int ProblemBronze(){
+    
   }
 }
 
