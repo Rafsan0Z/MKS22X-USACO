@@ -15,6 +15,9 @@ public class USACO{
   public static void takeinputs(String filename){
     File text = new File(filename);
     Scanner puzzle = new Scanner(text);
+    length = puzzle.nextInt();
+    width = puzzle.nextInt();
+    Elevation = puzzle.nextInt();
     while(puzzle.hasNextLine()){
       String line = puzzle.nextLine();
       System.out.println(line);
