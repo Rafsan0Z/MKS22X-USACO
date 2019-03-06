@@ -15,6 +15,7 @@ public class USACO{
   \* This section is only for the Bronze problem *\
 
   public static void takeinputs(String filename){
+    try{
     File text = new File(filename);
     Scanner puzzle = new Scanner(text);
     length = puzzle.nextInt();
@@ -28,6 +29,11 @@ public class USACO{
       String line = puzzle.nextLine();
       System.out.println(line);
   }
+} catch(FileNotFoundException e){
+  System.out.println("File not Found");
+  return 0;
+}
+}
 
   public int getVolume(){
     int volume = 0;
