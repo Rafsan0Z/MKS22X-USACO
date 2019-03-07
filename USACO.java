@@ -22,7 +22,7 @@ public class USACO{
   public int getVolume(){
     int volume = 0;
     for(int i = 0, j = 0; i < length && j < width; i = j+1, j++){
-      if(field[[i][j] > Elevation){field[i][j] = 0;}
+      if(field[i][j] > Elevation){field[i][j] = 0;}
       else{field[i][j] = Elevation - field[i][j];}
       volume += field[i][j]*72*72;
     }
@@ -106,7 +106,16 @@ public class USACO{
 
   /* This section is only for the Silver problem */
 
-  public static void TakeInputs(String inputFile){
+  public boolean canGo(int r, int c){
+    if(Pasture[r][c] == '*'){return false;}
+    return true;
+  }
+
+  public int CowsPerPath(int row, int col){
+    if(row == PointB[0] && col == PointB[1]){return true;}
+  }
+
+  public static int ProblemSilver(String inputFile){
     File text = new File(filename);
     Scanner puzzle = new Scanner(text);
     Length = puzzle.nextInt();
@@ -124,19 +133,6 @@ public class USACO{
     for(int i = 0; i < 2; i++){
       PointB[i] = puzzle.nextInt();
     }
-  }
-
-  public boolean canGo(int r, int c){
-    if(Pasture[r][c] == '*'){return false;}
-    return true;
-  }
-
-  public int CowsPerPath(int row, int col){
-    if(row == PointB[0] && col == PointB[1]){return true;}
-  }
-
-  public static int ProblemSilver(String inputFile){
-    TakeInputs(inputFile);
     return CowsPerPath();
   }
 
