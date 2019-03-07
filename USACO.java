@@ -83,7 +83,8 @@ public class USACO{
     steps = puzzle.nextInt();
     Pasture = new char[length][width];
     for(int i = 0, j = 0; i < length && j < width; i = j+1, j++){
-
+      String strip = puzzle.nextLine();
+      Pasture[i][j] = strip.charAt(j);
     }
 
     for(int i = 0; i < 2; i++){
