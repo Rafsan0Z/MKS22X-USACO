@@ -68,7 +68,7 @@ public class USACO{
 
   }
 
-  public static int ProblemBronze(String inputFile){
+  public int ProblemBronze(String inputFile){
     try{
     File text = new File(filename);
     Scanner puzzle = new Scanner(text);
@@ -115,7 +115,7 @@ public class USACO{
     if(row == PointB[0] && col == PointB[1]){return true;}
   }
 
-  public static int ProblemSilver(String inputFile){
+  public int ProblemSilver(String inputFile){
     File text = new File(filename);
     Scanner puzzle = new Scanner(text);
     Length = puzzle.nextInt();
