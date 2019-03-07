@@ -11,6 +11,8 @@ public class USACO{
 // These fields are for the Silver Problem
   private int Length;
   private int Width;
+  private int steps;
+  private int[][] moves = new int[][] {{1,0} , {-1,0}, {0,1}, {0,-1}};
 
   \* This section is only for the Bronze problem *\
 
