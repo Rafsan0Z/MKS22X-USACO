@@ -74,6 +74,11 @@ public class USACO{
 
   }
 
+  public boolean canGo(int r, int c){
+    if(Pasture[r][c] == "*"){return false;}
+    return true;
+  }
+
 
   public static int ProblemSilver(String inputFile){
     TakeInputs(inputFile);
