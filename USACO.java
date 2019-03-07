@@ -38,7 +38,7 @@ public class USACO{
   }
 
   public void completeRegion(int row, int col, int depth){
-    for(int i = row, j = col; i < row + 3 && j < col + 3){
+    for(int i = row, j = col; i < row + 3 && j < col + 3; i = j+1, j++){
       if(puzzle[i][j] > depth){puzzle[i][j] = depth;}
     }
   }
@@ -102,13 +102,11 @@ public class USACO{
     puzzle.close();
   }
 
-}
-
   /* End of Bronze Problem */
 
   /* This section is only for the Silver problem */
 
-  public static void TakeInputs(inputFile){
+  public static void TakeInputs(String inputFile){
     File text = new File(filename);
     Scanner puzzle = new Scanner(text);
     Length = puzzle.nextInt();
