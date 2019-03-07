@@ -53,10 +53,12 @@ public class USACO{
     return volume;
   }
 
-  public int FindMountain(){
-    for(int i = 0, j = 0; i < commands.length && j < commands[0].length; i = j+1, j++){
-      int peak = field[commands[i][j]]
+  public int FindMountain(int[] region){
+    int peak = region[0];
+    for(int i = 1; i < 9; i++){
+      if(region[1] > peak){peak = region[1];}
     }
+    return peak;
   }
 
   public int[] createRegion(int row, int col){
