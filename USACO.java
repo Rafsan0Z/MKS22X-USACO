@@ -19,30 +19,6 @@ public class USACO{
 
   /* This section is only for the Bronze problem */
 
-  public static void takeinputs(String filename){
-    try{
-    File text = new File(filename);
-    Scanner puzzle = new Scanner(text);
-    length = puzzle.nextInt();
-    width = puzzle.nextInt();
-    Elevation = puzzle.nextInt();
-    int commandlength = puzzle.nextInt();
-    commands = new int[commandlength][3];
-    field = new int[length][width];
-    for(int i = 0, j = 0; i < length && j < width; i = j+1, j++){
-      field[i][j] = puzzle.nextInt();
-    }
-    for(int i = 0; i < commandlength; i++){
-      for(int j = 0; j < 3; j++){
-        commands[i][j] = puzzle.nextInt();
-      }
-    }
-} catch(FileNotFoundException e){
-  System.out.println("File not Found");
-  return 0;
-}
-}
-
   public int getVolume(){
     int volume = 0;
     for(int i = 0, j = 0; i < length && j < width; i = j+1, j++){
@@ -93,7 +69,27 @@ public class USACO{
   }
 
   public static int ProblemBronze(String inputFile){
-    takeinputs(inputFile);
+    try{
+    File text = new File(filename);
+    Scanner puzzle = new Scanner(text);
+    length = puzzle.nextInt();
+    width = puzzle.nextInt();
+    Elevation = puzzle.nextInt();
+    int commandlength = puzzle.nextInt();
+    commands = new int[commandlength][3];
+    field = new int[length][width];
+    for(int i = 0, j = 0; i < length && j < width; i = j+1, j++){
+      field[i][j] = puzzle.nextInt();
+    }
+    for(int i = 0; i < commandlength; i++){
+      for(int j = 0; j < 3; j++){
+        commands[i][j] = puzzle.nextInt();
+      }
+    }
+    } catch(FileNotFoundException e){
+    System.out.println("File not Found");
+    return 0;
+    }
     while(Checkelevation()){
     for(int i = 0; i < commands.length; i++){
       int[] region = createRegion(commands[i][0], commands[i][1]);
