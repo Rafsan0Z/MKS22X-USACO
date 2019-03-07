@@ -82,9 +82,13 @@ public class USACO{
     return true;
   }
 
+  public int CowsPerPath(){
+
+  }
 
   public static int ProblemSilver(String inputFile){
     TakeInputs(inputFile);
+    return CowsPerPath();
   }
 
   \* End of Silver Problem *\
