@@ -26,6 +26,8 @@ public class USACO{
     length = puzzle.nextInt();
     width = puzzle.nextInt();
     Elevation = puzzle.nextInt();
+    int commandlength = puzzle.nextInt();
+    commands = new int[commandlength][3];
     field = new int[length][width];
     for(int i = 0, j = 0; i < length && j < width; i = j+1, j++){
       field[i][j] = puzzle.nextInt();
