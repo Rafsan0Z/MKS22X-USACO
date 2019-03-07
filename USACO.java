@@ -138,8 +138,9 @@ public class USACO{
 
   /* End of Silver Problem */
   // Here is the driver
-  public static void main(String[] args){
+  public void main(String[] args){
     System.out.println("Under Construction!");
+    int num = ProblemBronze("start");
   }
 
 }
