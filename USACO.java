@@ -73,8 +73,12 @@ public class USACO{
 
   /* This section is only for the Silver problem */
 
-  public static void TakeInputs(){
-
+  public static void TakeInputs(inputFile){
+    File text = new File(filename);
+    Scanner puzzle = new Scanner(text);
+    Length = puzzle.nextInt();
+    Width = puzzle.nextInt();
+    steps = puzzle.nextInt();
   }
 
   public boolean canGo(int r, int c){
