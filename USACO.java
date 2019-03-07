@@ -32,10 +32,11 @@ public class USACO{
     for(int i = 0, j = 0; i < length && j < width; i = j+1, j++){
       field[i][j] = puzzle.nextInt();
     }
-    while(puzzle.hasNextLine()){
-      String line = puzzle.nextLine();
-      System.out.println(line);
-  }
+    for(int i = 0; i < commandlength; i++){
+      for(int j = 0; j < 3; j++){
+        commands[i][j] = puzzle.nextInt();
+      }
+    }
 } catch(FileNotFoundException e){
   System.out.println("File not Found");
   return 0;
