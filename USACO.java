@@ -94,11 +94,14 @@ public class USACO{
 
   public static int ProblemBronze(String inputFile){
     takeinputs(inputFile);
+    while(Checkelevation()){
     for(int i = 0; i < commands.length; i++){
       int[] region = createRegion(commands[i][0], commands[i][1]);
       int peak = FindMountain(region);
       int depth = peak - commands[i][2];
+      completeRegion(commands[i][0],commands[i][1],depth);
     }
+  }
     return getVolume();
     puzzle.close();
   }
