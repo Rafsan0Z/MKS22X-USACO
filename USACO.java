@@ -85,6 +85,13 @@ public class USACO{
     for(int i = 0, j = 0; i < length && j < width; i = j+1, j++){
 
     }
+
+    for(int i = 0; i < 2; i++){
+      PointA[i] = puzzle.nextInt();
+    }
+    for(int i = 0; i < 2; i++){
+      PointB[i] = puzzle.nextInt();
+    }
   }
 
   public boolean canGo(int r, int c){
