@@ -81,7 +81,7 @@ public class USACO{
     steps = puzzle.nextInt();
     Pasture = new char[length][width];
     for(int i = 0, j = 0; i < length && j < width; i = j+1, j++){
-      
+
     }
   }
 
@@ -90,8 +90,8 @@ public class USACO{
     return true;
   }
 
-  public int CowsPerPath(){
-
+  public int CowsPerPath(int row, int col){
+    if(row == PointB[0] && col == PointB[1]){return true;}
   }
 
   public static int ProblemSilver(String inputFile){
