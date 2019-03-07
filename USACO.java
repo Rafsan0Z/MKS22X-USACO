@@ -79,6 +79,10 @@ public class USACO{
     Length = puzzle.nextInt();
     Width = puzzle.nextInt();
     steps = puzzle.nextInt();
+    Pasture = new char[length][width];
+    for(int i = 0, j = 0; i < length && j < width; i = j+1, j++){
+      
+    }
   }
 
   public boolean canGo(int r, int c){
