@@ -56,8 +56,14 @@ public class USACO{
     }
   }
 
-  public void createRegion(int row, int col){
-
+  public int[] createRegion(int row, int col){
+    int[] result = new int[9];
+    int counter = 0;
+    for(int i = row, j = col; i < row + 3 && j < col + 3; i = j+1, j++){
+      result[counter] = field[i][j];
+      counter++;
+    }
+    return result;
   }
 
   public boolean Stomp(int row, int col, int[] region){
