@@ -83,7 +83,9 @@ public class USACO{
       int depth = peak - commands[i][2];
     }
     return getVolume();
+    puzzle.close();
   }
+
 }
 
   /* End of Bronze Problem */
