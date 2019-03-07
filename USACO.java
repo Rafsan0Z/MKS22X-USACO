@@ -15,7 +15,7 @@ public class USACO{
   private int[][] moves = new int[][] {{1,0} , {-1,0}, {0,1}, {0,-1}};
   private String[][] Pasture;
 
-  \* This section is only for the Bronze problem *\
+  /* This section is only for the Bronze problem */
 
   public static void takeinputs(String filename){
     try{
@@ -69,9 +69,9 @@ public class USACO{
   }
 }
 
-  \* End of Bronze Problem *\
+  /* End of Bronze Problem */
 
-  \* This section is only for the Silver problem *\
+  /* This section is only for the Silver problem */
 
   public static void TakeInputs(){
 
@@ -91,6 +91,8 @@ public class USACO{
     return CowsPerPath();
   }
 
-  \* End of Silver Problem *\
+  /* End of Silver Problem */
+  // Here is the driver
+
 
 }
