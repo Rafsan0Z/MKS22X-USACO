@@ -14,6 +14,8 @@ public class USACO{
   private int steps;
   private int[][] moves = new int[][] {{1,0} , {-1,0}, {0,1}, {0,-1}};
   private char[][] Pasture;
+  private int[] PointA;
+  private int[] PointB;
 
   /* This section is only for the Bronze problem */
 
