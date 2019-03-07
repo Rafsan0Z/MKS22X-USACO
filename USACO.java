@@ -13,7 +13,7 @@ public class USACO{
   private int Width;
   private int steps;
   private int[][] moves = new int[][] {{1,0} , {-1,0}, {0,1}, {0,-1}};
-  private String[][] Pasture;
+  private char[][] Pasture;
 
   /* This section is only for the Bronze problem */
 
@@ -82,7 +82,7 @@ public class USACO{
   }
 
   public boolean canGo(int r, int c){
-    if(Pasture[r][c] == "*"){return false;}
+    if(Pasture[r][c] == '*'){return false;}
     return true;
   }
 
