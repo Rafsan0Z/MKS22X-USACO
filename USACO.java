@@ -61,6 +61,12 @@ public class USACO{
     return peak;
   }
 
+  public void completeRegion(int row, int col, int depth){
+    for(int i = row, j = col; i < row + 3 && j < col + 3){
+      if(puzzle[i][j] > depth){puzzle[i][j] = depth;}
+    }
+  }
+
   public int[] createRegion(int row, int col){
     int[] result = new int[9];
     int counter = 0;
