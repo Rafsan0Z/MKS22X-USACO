@@ -48,7 +48,7 @@ public class USACO{
     }
   }
 
-  public int[] createRegion(int row, int col){
+  /*public int[] createRegion(int row, int col){
     int[] result = new int[9];
     int counter = 0;
     for(int i = row, j = col; i < row + 3 && j < col + 3; i = j+1, j++){
@@ -56,7 +56,7 @@ public class USACO{
       counter++;
     }
     return result;
-  }
+  }*/
 
   public int ProblemBronze(String inputFile){
     int length;
@@ -88,13 +88,16 @@ public class USACO{
   for(int i = 0; i < commands.length; i++){
     int row = commands[i][0];
     int col = commands[i][1];
-    int[] result = new int[9];
+    int[] region = new int[9];
     int counter = 0;
-    for(int j = row, k = col; i < row + 3 && j < col + 3; i = j+1, j++){
-      result[counter] = field[i][j];
+    for(int j = row, k = col; j < row + 3 && k < col + 3; j = k+1, k++){
+      region[counter] = field[j][k];
       counter++;
     }
-    int peak = FindMountain(region);
+    int peak = region[0];
+    for(int i = 1; i < 9; i++){
+      if(region[1] > peak){peak = region[1];}
+    }
     int depth = peak - commands[i][2];
     completeRegion(commands[i][0],commands[i][1],depth);
   }
