@@ -39,7 +39,7 @@ public class USACO{
 
   public void completeRegion(int row, int col, int depth){
     for(int i = row, j = col; i < row + 3 && j < col + 3; i = j+1, j++){
-      if(puzzle[i][j] > depth){puzzle[i][j] = depth;}
+      if(field[i][j] > depth){field[i][j] = depth;}
     }
   }
 
@@ -68,7 +68,7 @@ public class USACO{
 
   public int ProblemBronze(String inputFile){
     try{
-    File text = new File(filename);
+    File text = new File(inputFile);
     Scanner puzzle = new Scanner(text);
     length = puzzle.nextInt();
     width = puzzle.nextInt();
@@ -84,19 +84,19 @@ public class USACO{
         commands[i][j] = puzzle.nextInt();
       }
     }
-    } catch(FileNotFoundException e){
-    System.out.println("File not Found");
-    return 0;
-    }
     for(int i = 0; i < commands.length; i++){
       int[] region = createRegion(commands[i][0], commands[i][1]);
       int peak = FindMountain(region);
       int depth = peak - commands[i][2];
       completeRegion(commands[i][0],commands[i][1],depth);
     }
-    puzzle.Elevate()
+    puzzle.Elevate();
     return getVolume();
     puzzle.close();
+  } catch(FileNotFoundException e){
+  System.out.println("File not Found");
+  return 0;
+  }
   }
 
   /* End of Bronze Problem */
