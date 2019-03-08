@@ -14,16 +14,6 @@ public class USACO{
   private int[] PointB;
 
   /* This section is only for the Bronze problem */
-
-  public void Elevate(){
-    for(int i = 0; i < length; i++){
-      for(int j = 0; j < width; j++){
-        if(field[i][j] >= Elevation){field[i][j] = 0;}
-        else{field[i][j] = Elevation - field[i][j];}
-      }
-    }
-  }
-
   /*public int[] createRegion(int row, int col){
     int[] result = new int[9];
     int counter = 0;
