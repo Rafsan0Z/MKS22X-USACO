@@ -86,7 +86,14 @@ public class USACO{
   return 0;
   }
   for(int i = 0; i < commands.length; i++){
-    int[] region = createRegion(commands[i][0], commands[i][1]);
+    int row = commands[i][0];
+    int col = commands[i][1];
+    int[] result = new int[9];
+    int counter = 0;
+    for(int j = row, k = col; i < row + 3 && j < col + 3; i = j+1, j++){
+      result[counter] = field[i][j];
+      counter++;
+    }
     int peak = FindMountain(region);
     int depth = peak - commands[i][2];
     completeRegion(commands[i][0],commands[i][1],depth);
