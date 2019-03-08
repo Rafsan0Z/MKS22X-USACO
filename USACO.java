@@ -80,20 +80,18 @@ public class USACO{
         commands[i][j] = puzzle.nextInt();
       }
     }
-    for(int i = 0; i < commands.length; i++){
-      int[] region = createRegion(commands[i][0], commands[i][1]);
-      int peak = FindMountain(region);
-      int depth = peak - commands[i][2];
-      completeRegion(commands[i][0],commands[i][1],depth);
-    }
-    Elevate();
-    return getVolume();
-    puzzle.close();
   } catch(FileNotFoundException e){
   System.out.println("File not Found");
   return 0;
   }
-  return -999;
+  for(int i = 0; i < commands.length; i++){
+    int[] region = createRegion(commands[i][0], commands[i][1]);
+    int peak = FindMountain(region);
+    int depth = peak - commands[i][2];
+    completeRegion(commands[i][0],commands[i][1],depth);
+  }
+  Elevate();
+  return getVolume();
   }
 
   /* End of Bronze Problem */
@@ -110,6 +108,7 @@ public class USACO{
   }
 
   public int ProblemSilver(String inputFile){
+    try{
     File text = new File(inputFile);
     Scanner puzzle = new Scanner(text);
     Length = puzzle.nextInt();
@@ -127,6 +126,7 @@ public class USACO{
     for(int i = 0; i < 2; i++){
       PointB[i] = puzzle.nextInt();
     }
+  }catch(FileNotFoundException e){}
     return CowsPerPath(PointA[0], PointA[1]);
   }
 
