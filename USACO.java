@@ -90,7 +90,7 @@ public class USACO{
       int depth = peak - commands[i][2];
       completeRegion(commands[i][0],commands[i][1],depth);
     }
-    puzzle.Elevate();
+    Elevate();
     return getVolume();
     puzzle.close();
   } catch(FileNotFoundException e){
@@ -109,11 +109,11 @@ public class USACO{
   }
 
   public int CowsPerPath(int row, int col){
-    if(row == PointB[0] && col == PointB[1]){return true;}
+    return 0;
   }
 
   public int ProblemSilver(String inputFile){
-    File text = new File(filename);
+    File text = new File(inputFile);
     Scanner puzzle = new Scanner(text);
     Length = puzzle.nextInt();
     Width = puzzle.nextInt();
@@ -130,7 +130,7 @@ public class USACO{
     for(int i = 0; i < 2; i++){
       PointB[i] = puzzle.nextInt();
     }
-    return CowsPerPath();
+    return CowsPerPath(PointA[0], PointA[1]);
   }
 
   /* End of Silver Problem */
