@@ -54,8 +54,8 @@ public class USACO{
       if(field[m][n] > depth){field[m][n] = depth;}
     }
   }
-  for(int o = 0; i < length; o++){
-    for(int p = 0; j < width; p++){
+  for(int o = 0; o < length; o++){
+    for(int p = 0; p < width; p++){
       if(field[o][p] >= Elevation){field[o][p] = 0;}
       else{field[o][p] = Elevation - field[o][p];}
     }
@@ -93,8 +93,8 @@ return 0;
     Length = puzzle.nextInt();
     Width = puzzle.nextInt();
     steps = puzzle.nextInt();
-    Pasture = new char[length][width];
-    for(int i = 0, j = 0; i < length && j < width; i = j+1, j++){
+    Pasture = new char[Length][Width];
+    for(int i = 0, j = 0; i < Length && j < Width; i = j+1, j++){
       String strip = puzzle.nextLine();
       Pasture[i][j] = strip.charAt(j);
     }
