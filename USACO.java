@@ -15,7 +15,7 @@ public class USACO{
 
   /* This section is only for the Bronze problem */
 
-  public int ProblemBronze(String inputFile){
+  public static int ProblemBronze(String inputFile){
     int length = 0;
     int width = 0;
     int Elevation = 0;
