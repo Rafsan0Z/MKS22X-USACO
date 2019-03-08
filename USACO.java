@@ -14,17 +14,6 @@ public class USACO{
   private int[] PointB;
 
   /* This section is only for the Bronze problem */
-
-  public int getVolume(){
-    int volume = 0;
-    for(int i = 0, j = 0; i < length && j < width; i = j+1, j++){
-      if(field[i][j] > Elevation){field[i][j] = 0;}
-      else{field[i][j] = Elevation - field[i][j];}
-      volume += field[i][j]*72*72;
-    }
-    return volume;
-  }
-
   public int FindMountain(int[] region){
     int peak = region[0];
     for(int i = 1; i < 9; i++){
@@ -102,7 +91,13 @@ public class USACO{
     completeRegion(commands[i][0],commands[i][1],depth);
   }
   Elevate();
-  return getVolume();
+  int volume = 0;
+  for(int i = 0, j = 0; i < length && j < width; i = j+1, j++){
+    if(field[i][j] > Elevation){field[i][j] = 0;}
+    else{field[i][j] = Elevation - field[i][j];}
+    volume += field[i][j]*72*72;
+  }
+  return volume;
   }
 
   /* End of Bronze Problem */
