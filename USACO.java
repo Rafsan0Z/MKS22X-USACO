@@ -3,11 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 public class USACO{
 // These fields are for the Bronze Problem
-  private int length;
-  private int width;
-  private int Elevation;
-  private int[][] field;
-  private int[][] commands;
+
 // These fields are for the Silver Problem
   private int Length;
   private int Width;
@@ -63,6 +59,11 @@ public class USACO{
   }
 
   public int ProblemBronze(String inputFile){
+    int length;
+    int width;
+    int Elevation;
+    int[][] field;
+    int[][] commands;
     try{
     File text = new File(inputFile);
     Scanner puzzle = new Scanner(text);
@@ -132,7 +133,7 @@ public class USACO{
 
   /* End of Silver Problem */
   // Here is the driver
-  public void main(String[] args){
+  public static void main(String[] args){
     System.out.println("Under Construction!");
     int num = ProblemBronze("start");
   }
