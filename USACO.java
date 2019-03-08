@@ -14,15 +14,6 @@ public class USACO{
   private int[] PointB;
 
   /* This section is only for the Bronze problem */
-  /*public int[] createRegion(int row, int col){
-    int[] result = new int[9];
-    int counter = 0;
-    for(int i = row, j = col; i < row + 3 && j < col + 3; i = j+1, j++){
-      result[counter] = field[i][j];
-      counter++;
-    }
-    return result;
-  }*/
 
   public int ProblemBronze(String inputFile){
     int length = 0;
