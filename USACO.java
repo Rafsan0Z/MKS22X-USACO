@@ -41,9 +41,11 @@ public class USACO{
     int col = commands[i][1];
     int[] region = new int[9];
     int counter = 0;
-    for(int j = row, k = col; j < row + 3 && k < col + 3; j = k+1, k++){
+    for(int j = row; j < row + 3; j++){
+      for(int k = col; k < col + 3; k++){
       region[counter] = field[j][k];
       counter++;
+    }
     }
     int peak = region[0];
     for(int l = 1; l < 9; l++){
