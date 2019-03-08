@@ -14,13 +14,6 @@ public class USACO{
   private int[] PointB;
 
   /* This section is only for the Bronze problem */
-  public int FindMountain(int[] region){
-    int peak = region[0];
-    for(int i = 1; i < 9; i++){
-      if(region[1] > peak){peak = region[1];}
-    }
-    return peak;
-  }
 
   public void completeRegion(int row, int col, int depth){
     for(int i = row, j = col; i < row + 3 && j < col + 3; i = j+1, j++){
@@ -84,7 +77,7 @@ public class USACO{
       counter++;
     }
     int peak = region[0];
-    for(int i = 1; i < 9; i++){
+    for(int l = 1; l < 9; l++){
       if(region[1] > peak){peak = region[1];}
     }
     int depth = peak - commands[i][2];
