@@ -62,10 +62,6 @@ public class USACO{
     return result;
   }
 
-  public boolean Stomp(int row, int col, int[] region){
-
-  }
-
   public int ProblemBronze(String inputFile){
     try{
     File text = new File(inputFile);
@@ -97,6 +93,7 @@ public class USACO{
   System.out.println("File not Found");
   return 0;
   }
+  return -999;
   }
 
   /* End of Bronze Problem */
