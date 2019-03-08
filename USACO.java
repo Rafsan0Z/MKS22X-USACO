@@ -35,11 +35,9 @@ public class USACO{
   }*/
 
   public int ProblemBronze(String inputFile){
-    int length;
-    int width;
-    int Elevation;
-    int[][] field;
-    int[][] commands;
+    int length = 0;
+    int width = 0;
+    int Elevation = 0;
     try{
     File text = new File(inputFile);
     Scanner puzzle = new Scanner(text);
@@ -47,8 +45,8 @@ public class USACO{
     width = puzzle.nextInt();
     Elevation = puzzle.nextInt();
     int commandlength = puzzle.nextInt();
-    commands = new int[commandlength][3];
-    field = new int[length][width];
+    int[][] commands = new int[commandlength][3];
+    int[][] field = new int[length][width];
     for(int i = 0, j = 0; i < length && j < width; i = j+1, j++){
       field[i][j] = puzzle.nextInt();
     }
@@ -57,10 +55,6 @@ public class USACO{
         commands[i][j] = puzzle.nextInt();
       }
     }
-  } catch(FileNotFoundException e){
-  System.out.println("File not Found");
-  return 0;
-  }
   for(int i = 0; i < commands.length; i++){
     int row = commands[i][0];
     int col = commands[i][1];
@@ -79,7 +73,12 @@ public class USACO{
       if(field[m][n] > depth){field[m][n] = depth;}
     }
   }
-  Elevate();
+  for(int o = 0; i < length; o++){
+    for(int p = 0; j < width; p++){
+      if(field[o][p] >= Elevation){field[o][p] = 0;}
+      else{field[o][p] = Elevation - field[o][p];}
+    }
+  }
   int volume = 0;
   for(int i = 0, j = 0; i < length && j < width; i = j+1, j++){
     if(field[i][j] > Elevation){field[i][j] = 0;}
@@ -87,6 +86,10 @@ public class USACO{
     volume += field[i][j]*72*72;
   }
   return volume;
+}catch(FileNotFoundException e){
+System.out.println("File not Found");
+return 0;
+}
   }
 
   /* End of Bronze Problem */
