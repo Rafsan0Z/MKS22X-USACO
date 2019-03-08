@@ -15,12 +15,6 @@ public class USACO{
 
   /* This section is only for the Bronze problem */
 
-  public void completeRegion(int row, int col, int depth){
-    for(int i = row, j = col; i < row + 3 && j < col + 3; i = j+1, j++){
-      if(field[i][j] > depth){field[i][j] = depth;}
-    }
-  }
-
   public void Elevate(){
     for(int i = 0; i < length; i++){
       for(int j = 0; j < width; j++){
@@ -78,10 +72,12 @@ public class USACO{
     }
     int peak = region[0];
     for(int l = 1; l < 9; l++){
-      if(region[1] > peak){peak = region[1];}
+      if(region[l] > peak){peak = region[l];}
     }
     int depth = peak - commands[i][2];
-    completeRegion(commands[i][0],commands[i][1],depth);
+    for(int m = row, n = col; m < row + 3 && n < col + 3; m = n+1, n++){
+      if(field[m][n] > depth){field[m][n] = depth;}
+    }
   }
   Elevate();
   int volume = 0;
