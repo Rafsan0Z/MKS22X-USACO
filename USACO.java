@@ -112,7 +112,7 @@ return 0;
   /* End of Silver Problem */
   // Here is the driver
   public static void main(String[] args){
-    int num = ProblemBronze("start");
+    int num = ProblemBronze("makelake.1.in");
   }
 
 }
