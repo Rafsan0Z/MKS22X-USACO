@@ -43,15 +43,13 @@ public class USACO{
     }
   }
 
-  public boolean Checkelevation(){
+  public void Elevate(){
     for(int i = 0; i < length; i++){
-      int water = 0;
       for(int j = 0; j < width; j++){
-        water += puzzle[i][j];
+        if(field[i][j] >= Elevation){field[i][j] = 0;}
+        else{field[i][j] = Elevation - field[i][j];}
       }
-      if(Elevation == water){return true;}
     }
-    return false;
   }
 
   public int[] createRegion(int row, int col){
