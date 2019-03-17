@@ -52,9 +52,11 @@ public class USACO{
       if(region[l] > peak){peak = region[l];}
     }
     int depth = peak - commands[i][2];
-    for(int m = row, n = col; m < row + 3 && n < col + 3; m = n+1, n++){
+    for(int m = row; m < row + 3; m++){
+      for(int n = col; n < col + 3; n++){
       if(field[m][n] > depth){field[m][n] = depth;}
     }
+  }
   }
   for(int o = 0; o < length; o++){
     for(int p = 0; p < width; p++){
@@ -64,10 +66,13 @@ public class USACO{
   }
   int volume = 0;
   int multiplier = width*width*12*12;
-  for(int i = 0, j = 0; i < length && j < width; i = j+1, j++){
-    if(field[i][j] >= Elevation){field[i][j] = 0;}
-    else{field[i][j] = Elevation - field[i][j];}
+  for(int i = 0; i < length; i++){
+    for(int j = 0; j < width; j++){
+    //if(field[i][j] >= Elevation){field[i][j] = 0;}
+    //else{field[i][j] = Elevation - field[i][j];}
     volume += field[i][j];
+    System.out.println(field[i][j]);
+  }
   }
   return volume;
 }catch(FileNotFoundException e){
