@@ -26,8 +26,8 @@ public class USACO{
   return result + "]";
 }
 
-private static boolean inBounds(int r, int c){
-  if(r < size && r >= 0 && c < size && c >= 0){
+private static boolean inBounds(int r, int c, int length, int width){
+  if(r < length && r >= 0 && c < width && c >= 0){
     return true;
   }
   return false;
@@ -64,7 +64,7 @@ private static boolean inBounds(int r, int c){
     int counter = 0;
     for(int j = row; j < row + 3; j++){
       for(int k = col; k < col + 3; k++){
-      if(inBounds(j,k)){
+      if(inBounds(j,k,length,width)){
       region[counter] = field[j][k];
     }
       counter++;
