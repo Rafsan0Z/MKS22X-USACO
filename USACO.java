@@ -36,6 +36,7 @@ public class USACO{
     for(int i = 0; i < commandlength; i++){
       for(int j = 0; j < 3; j++){
         commands[i][j] = puzzle.nextInt();
+        System.out.println(commands[i]);
       }
     }
   for(int i = 0; i < commands.length; i++){
