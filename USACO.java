@@ -28,8 +28,10 @@ public class USACO{
     int commandlength = puzzle.nextInt();
     int[][] commands = new int[commandlength][3];
     int[][] field = new int[length][width];
-    for(int i = 0, j = 0; i < length && j < width; i = j+1, j++){
+    for(int i = 0; i < length; i++){
+      for(int j = 0; j < width; j++){
       field[i][j] = puzzle.nextInt();
+    }
     }
     for(int i = 0; i < commandlength; i++){
       for(int j = 0; j < 3; j++){
@@ -68,10 +70,9 @@ public class USACO{
   int multiplier = width*width*12*12;
   for(int i = 0; i < length; i++){
     for(int j = 0; j < width; j++){
-    //if(field[i][j] >= Elevation){field[i][j] = 0;}
-    //else{field[i][j] = Elevation - field[i][j];}
+    if(field[i][j] >= Elevation){field[i][j] = 0;}
+    else{field[i][j] = Elevation - field[i][j];}
     volume += field[i][j];
-    System.out.println(field[i][j]);
   }
   }
   return volume;
