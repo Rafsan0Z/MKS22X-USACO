@@ -26,6 +26,13 @@ public class USACO{
   return result + "]";
 }
 
+private static boolean inBounds(int r, int c){
+  if(r < size && r >= 0 && c < size && c >= 0){
+    return true;
+  }
+  return false;
+}
+
   public static int ProblemBronze(String inputFile){
     int length = 0;
     int width = 0;
@@ -47,17 +54,19 @@ public class USACO{
     for(int i = 0; i < commandlength; i++){
       for(int j = 0; j < 3; j++){
         commands[i][j] = puzzle.nextInt();
-        System.out.println(commands[i]);
       }
+      System.out.println(printArray(commands[i]));
     }
   for(int i = 0; i < commands.length; i++){
-    int row = 0;
-    int col = 1;
+    int row = commands[i][0];
+    int col = commands[i][1];
     int[] region = new int[9];
     int counter = 0;
     for(int j = row; j < row + 3; j++){
       for(int k = col; k < col + 3; k++){
+      if(inBounds(j,k)){
       region[counter] = field[j][k];
+    }
       counter++;
     }
     }
