@@ -83,12 +83,12 @@ private static boolean inBounds(int r, int c, int length, int width){
     }
   }
   }
-  for(int o = 0; o < length; o++){
+  /*for(int o = 0; o < length; o++){
     for(int p = 0; p < width; p++){
       if(field[o][p] >= Elevation){field[o][p] = 0;}
       else{field[o][p] = Elevation - field[o][p];}
     }
-  }
+  }*/
   int volume = 0;
   int multiplier = width*width*12*12;
   for(int i = 0; i < length; i++){
@@ -97,6 +97,7 @@ private static boolean inBounds(int r, int c, int length, int width){
     else{field[i][j] = Elevation - field[i][j];}
     volume += field[i][j];
   }
+  System.out.println(printArray(field[i]));
   }
   return volume;
 }catch(FileNotFoundException e){
@@ -158,7 +159,7 @@ return 0;
   }catch(FileNotFoundException e){
     System.out.println("No file!");
   }*/
-  System.out.println(ProblemBronze("makelake.2.in"));
+  System.out.println(ProblemBronze("makelake.1.in"));
   }
 
 }
