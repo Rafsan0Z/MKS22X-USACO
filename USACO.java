@@ -128,6 +128,7 @@ return 0;
   }catch(FileNotFoundException e){
     System.out.println("No file!");
   }
+  System.out.println(ProblemBronze("makelake.2.in"));
   }
 
 }
