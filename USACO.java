@@ -15,6 +15,17 @@ public class USACO{
 
   /* This section is only for the Bronze problem */
 
+  public static String printArray(int[] ary) {
+ String result = "[";
+ for (int i = 0; i < ary.length ; i++) {
+  result += " " + ary[i];
+  if (i != ary.length - 1) {
+    result += ",";
+  }
+}
+  return result + "]";
+}
+
   public static int ProblemBronze(String inputFile){
     int length = 0;
     int width = 0;
