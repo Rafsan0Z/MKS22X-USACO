@@ -114,8 +114,16 @@ return 0;
   /* End of Silver Problem */
   // Here is the driver
   public static void main(String[] args){
-    int num = ProblemBronze("makelake.1.in");
-    System.out.println(num);
+    for(int i = 1; i <= 5; i++){
+      String input = "makelake."+i+".in";
+      String output = "makelake."+i+".out";
+      File test = new File(output);
+      Scanner answer = new Scanner(test);
+      int compare = answer.nextInt();
+      int num = ProblemBronze(input);
+      if(num == compare){System.out.println("Input: " + input+". Result: PASS!");}
+      else{System.out.println("Input: " + input+". Result: FAIL!");}
+    }
   }
 
 }
