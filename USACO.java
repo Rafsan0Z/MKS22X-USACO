@@ -43,6 +43,7 @@ public class USACO{
     int counter = 0;
     for(int j = row; j < row + 3; j++){
       for(int k = col; k < col + 3; k++){
+      System.out.println(row + ", " + j + ", " + k);
       region[counter] = field[j][k];
       counter++;
     }
