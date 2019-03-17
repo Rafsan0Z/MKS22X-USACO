@@ -114,6 +114,7 @@ return 0;
   /* End of Silver Problem */
   // Here is the driver
   public static void main(String[] args){
+    try{
     for(int i = 1; i <= 5; i++){
       String input = "makelake."+i+".in";
       String output = "makelake."+i+".out";
@@ -124,6 +125,9 @@ return 0;
       if(num == compare){System.out.println("Input: " + input+". Result: PASS!");}
       else{System.out.println("Input: " + input+". Result: FAIL!");}
     }
+  }catch(FileNotFoundException e){
+    System.out.println("No file!");
+  }
   }
 
 }
