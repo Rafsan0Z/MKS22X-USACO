@@ -63,10 +63,11 @@ public class USACO{
     }
   }
   int volume = 0;
+  int multiplier = width*width*12*12;
   for(int i = 0, j = 0; i < length && j < width; i = j+1, j++){
-    if(field[i][j] > Elevation){field[i][j] = 0;}
+    if(field[i][j] >= Elevation){field[i][j] = 0;}
     else{field[i][j] = Elevation - field[i][j];}
-    volume += field[i][j]*72*72;
+    volume += field[i][j];
   }
   return volume;
 }catch(FileNotFoundException e){
@@ -123,7 +124,7 @@ return 0;
       int compare = answer.nextInt();
       int num = ProblemBronze(input);
       if(num == compare){System.out.println("Input: " + input+". Result: PASS!");}
-      else{System.out.println("Input: " + input+". Result: FAIL!");}
+      else{System.out.println("Input: " + input+". Result: FAIL! Actual: " + compare/(72*72)+ ". Result: "+num);}
     }
   }catch(FileNotFoundException e){
     System.out.println("No file!");
