@@ -37,13 +37,12 @@ public class USACO{
       }
     }
   for(int i = 0; i < commands.length; i++){
-    int row = commands[i][0];
-    int col = commands[i][1];
+    int row = 0;
+    int col = 1;
     int[] region = new int[9];
     int counter = 0;
     for(int j = row; j < row + 3; j++){
       for(int k = col; k < col + 3; k++){
-      System.out.println(row + ", " + j + ", " + k);
       region[counter] = field[j][k];
       counter++;
     }
@@ -116,6 +115,7 @@ return 0;
   // Here is the driver
   public static void main(String[] args){
     int num = ProblemBronze("makelake.1.in");
+    System.out.println(num);
   }
 
 }
