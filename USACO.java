@@ -77,7 +77,9 @@ private static boolean inBounds(int r, int c, int length, int width){
     int depth = peak - commands[i][2];
     for(int m = row; m < row + 3; m++){
       for(int n = col; n < col + 3; n++){
+        if(inBounds(m,n,length,width)){
       if(field[m][n] > depth){field[m][n] = depth;}
+    }
     }
   }
   }
