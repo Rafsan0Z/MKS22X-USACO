@@ -127,15 +127,6 @@ return 0;
 
   /* This section is only for the Silver problem */
 
-  public boolean canGo(int r, int c){
-    if(Pasture[r][c] == '*'){return false;}
-    return true;
-  }
-
-  public int CowsPerPath(int row, int col){
-    return 0;
-  }
-
   public static int ProblemSilver(String inputFile){
     try{
     File text = new File(inputFile);
