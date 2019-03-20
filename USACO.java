@@ -2,11 +2,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 public class USACO{
-// These fields are for the Bronze Problem
-
-// These fields are for the Silver Problem
-
-  /* This section is only for the Bronze problem */
 
   public static String printArray(int[] ary) {
  String result = "[";
@@ -94,12 +89,6 @@ private static boolean inBounds(int r, int c, int length, int width){
     }
   }
   }
-  /*for(int o = 0; o < length; o++){
-    for(int p = 0; p < width; p++){
-      if(field[o][p] >= Elevation){field[o][p] = 0;}
-      else{field[o][p] = Elevation - field[o][p];}
-    }
-  }*/
   int volume = 0;
   int multiplier = width*width*12*12;
   for(int i = 0; i < length; i++){
@@ -115,10 +104,6 @@ System.out.println("File not Found");
 return 0;
 }
   }
-
-  /* End of Bronze Problem */
-
-  /* This section is only for the Silver problem */
 
   public static int ProblemSilver(String inputFile){
     try{
@@ -173,8 +158,6 @@ return 0;
     return -1;
   }
 
-  /* End of Silver Problem */
-  // Here is the driver
   public static void main(String[] arg){
     try{
     for(int i = 1; i <= 5; i++){
