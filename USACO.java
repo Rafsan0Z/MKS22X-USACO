@@ -131,10 +131,12 @@ return 0;
     try{
     File text = new File(inputFile);
     Scanner puzzle = new Scanner(text);
-    Length = puzzle.nextInt();
-    Width = puzzle.nextInt();
-    steps = puzzle.nextInt();
-    Pasture = new char[Length][Width];
+    int Length = puzzle.nextInt();
+    int Width = puzzle.nextInt();
+    int steps = puzzle.nextInt();
+    int[][] Pasture = new char[Length][Width];
+    int[][] copy = new int[Length][Width];
+    int[][] print = new int[Length][Width];
     for(int i = 0, j = 0; i < Length && j < Width; i = j+1, j++){
       String strip = puzzle.nextLine();
       Pasture[i][j] = strip.charAt(j);
@@ -164,7 +166,7 @@ return 0;
   }
   return 0;
   }catch(FileNotFoundException e){}
-    return CowsPerPath(PointA[0], PointA[1]);
+    return -1;
   }
 
   /* End of Silver Problem */
