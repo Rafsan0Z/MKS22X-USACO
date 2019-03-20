@@ -136,7 +136,7 @@ return 0;
     return 0;
   }
 
-  public int ProblemSilver(String inputFile){
+  public static int ProblemSilver(String inputFile){
     try{
     File text = new File(inputFile);
     Scanner puzzle = new Scanner(text);
@@ -171,7 +171,7 @@ return 0;
       }
   }
   }
-
+  return 0;
   }catch(FileNotFoundException e){}
     return CowsPerPath(PointA[0], PointA[1]);
   }
@@ -193,6 +193,20 @@ return 0;
   }catch(FileNotFoundException e){
     System.out.println("No file!");
   }
+  try{
+  for(int i = 1; i <= 5; i++){
+    String input = "ctravel."+i+".in";
+    String output = "ctravel."+i+".out";
+    File test = new File(output);
+    Scanner answer = new Scanner(test);
+    int compare = answer.nextInt();
+    int num = ProblemSilver(input);
+    if(num == compare){System.out.println("Input: " + input+". Result: PASS!");}
+    else{System.out.println("Input: " + input+". Result: FAIL! Actual: " + compare+ ". Result: "+num);}
+  }
+}catch(FileNotFoundException e){
+  System.out.println("No file!");
+}
   }
 
 }
