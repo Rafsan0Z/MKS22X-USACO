@@ -26,6 +26,25 @@ public class USACO{
   return result + "]";
 }
 
+public static void printArray(int[][] ary) {
+  String result = "[";
+  for (int i = 0; i < ary.length ; i++) {
+    for(int j = 0; j < ary[i].length ; j++) {
+      if ( j == 0 ) {
+        result += "{";
+      }
+      if ( j == ary[i].length - 1) {
+        result += ary[i][j];
+        result += "}, \n";
+      }
+      else{
+        result += ary[i][j] + ",";
+      }
+    }
+  }
+  System.out.println(result + "]");
+}
+
 private static boolean inBounds(int r, int c, int length, int width){
   if(r < length && r >= 0 && c < width && c >= 0){
     return true;
@@ -55,7 +74,6 @@ private static boolean inBounds(int r, int c, int length, int width){
       for(int j = 0; j < 3; j++){
         commands[i][j] = puzzle.nextInt();
       }
-      System.out.println(printArray(commands[i]));
     }
   for(int i = 0; i < commands.length; i++){
     int row = commands[i][0];
@@ -70,6 +88,7 @@ private static boolean inBounds(int r, int c, int length, int width){
       counter++;
     }
     }
+    System.out.println(printArray(field));
     int peak = region[0];
     for(int l = 1; l < 9; l++){
       if(region[l] > peak){peak = region[l];}
