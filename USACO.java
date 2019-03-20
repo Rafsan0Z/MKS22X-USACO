@@ -132,9 +132,12 @@ return 0;
     int[][] print = new int[Length][Width];
     int[] PointA = new int[2];
     int[] PointB = new int[2];
-    for(int i = 0, j = 0; i < Length && j < Width; i = j+1, j++){
-      String strip = puzzle.nextLine();
+    String strip = puzzle.nextLine();
+    for(int i = 0; i < Length; i++){
+      strip = puzzle.nextLine();
+      for(int j = 0; j < Width; j++){
       Pasture[i][j] = strip.charAt(j);
+    }
     }
 
     for(int i = 0; i < 2; i++){
@@ -158,6 +161,7 @@ return 0;
            copy[i][j] = print[i][j];
       }
   }
+  steps--;
   }
   return 0;
   }catch(FileNotFoundException e){}
