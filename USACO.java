@@ -5,13 +5,6 @@ public class USACO{
 // These fields are for the Bronze Problem
 
 // These fields are for the Silver Problem
-  private int Length;
-  private int Width;
-  private int steps;
-  private int[][] moves = new int[][] {{1,0} , {-1,0}, {0,1}, {0,-1}};
-  private char[][] Pasture;
-  private int[] PointA;
-  private int[] PointB;
 
   /* This section is only for the Bronze problem */
 
@@ -134,9 +127,11 @@ return 0;
     int Length = puzzle.nextInt();
     int Width = puzzle.nextInt();
     int steps = puzzle.nextInt();
-    int[][] Pasture = new char[Length][Width];
+    char[][] Pasture = new char[Length][Width];
     int[][] copy = new int[Length][Width];
     int[][] print = new int[Length][Width];
+    int[] PointA = new int[2];
+    int[] PointB = new int[2];
     for(int i = 0, j = 0; i < Length && j < Width; i = j+1, j++){
       String strip = puzzle.nextLine();
       Pasture[i][j] = strip.charAt(j);
