@@ -163,6 +163,13 @@ return 0;
       }
     }
     }
+    print[PointA[0]][PointA[1]] = 1;
+    while (steps > 0) {
+      for (int i = 0; i < Length; i++) {
+        for (int j = 0; j < Width; j++) {
+           copy[i][j] = print[i][j];
+      }
+  }
   }catch(FileNotFoundException e){}
     return CowsPerPath(PointA[0], PointA[1]);
   }
