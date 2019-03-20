@@ -161,6 +161,11 @@ return 0;
            copy[i][j] = print[i][j];
       }
   }
+      for(int i = 0; i < Length; i++){
+        for(int j = 0; j < Width; j++){
+          //Algorithm
+        }
+      }
   steps--;
   }
   return 0;
