@@ -161,7 +161,7 @@ return 0;
 
   /* End of Silver Problem */
   // Here is the driver
-  public static void main(String[] args){
+  public static void main(String[] arg){
     try{
     for(int i = 1; i <= 5; i++){
       String input = "makelake."+i+".in";
