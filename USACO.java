@@ -127,7 +127,7 @@ return 0;
 
   /* This section is only for the Silver problem */
 
-  /*public boolean canGo(int r, int c){
+  public boolean canGo(int r, int c){
     if(Pasture[r][c] == '*'){return false;}
     return true;
   }
@@ -157,7 +157,7 @@ return 0;
     }
   }catch(FileNotFoundException e){}
     return CowsPerPath(PointA[0], PointA[1]);
-  }*/
+  }
 
   /* End of Silver Problem */
   // Here is the driver
