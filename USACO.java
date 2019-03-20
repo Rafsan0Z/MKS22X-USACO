@@ -26,7 +26,7 @@ public class USACO{
   return result + "]";
 }
 
-public static void printArray(int[][] ary) {
+public static String printArray(int[][] ary) {
   String result = "[";
   for (int i = 0; i < ary.length ; i++) {
     for(int j = 0; j < ary[i].length ; j++) {
@@ -42,7 +42,7 @@ public static void printArray(int[][] ary) {
       }
     }
   }
-  System.out.println(result + "]");
+  return result + "]";
 }
 
 private static boolean inBounds(int r, int c, int length, int width){
@@ -76,8 +76,8 @@ private static boolean inBounds(int r, int c, int length, int width){
       }
     }
   for(int i = 0; i < commands.length; i++){
-    int row = commands[i][0];
-    int col = commands[i][1];
+    int row = commands[i][0]-1;
+    int col = commands[i][1]-1;
     int[] region = new int[9];
     int counter = 0;
     for(int j = row; j < row + 3; j++){
@@ -88,7 +88,6 @@ private static boolean inBounds(int r, int c, int length, int width){
       counter++;
     }
     }
-    System.out.println(printArray(field));
     int peak = region[0];
     for(int l = 1; l < 9; l++){
       if(region[l] > peak){peak = region[l];}
@@ -102,6 +101,7 @@ private static boolean inBounds(int r, int c, int length, int width){
     }
   }
   }
+  System.out.println(printArray(field));
   /*for(int o = 0; o < length; o++){
     for(int p = 0; p < width; p++){
       if(field[o][p] >= Elevation){field[o][p] = 0;}
@@ -118,7 +118,7 @@ private static boolean inBounds(int r, int c, int length, int width){
   }
   System.out.println(printArray(field[i]));
   }
-  return volume;
+  return volume*72*72;
 }catch(FileNotFoundException e){
 System.out.println("File not Found");
 return 0;
@@ -178,7 +178,7 @@ return 0;
   }catch(FileNotFoundException e){
     System.out.println("No file!");
   }*/
-  System.out.println(ProblemBronze("makelake.1.in"));
+  System.out.println(ProblemBronze("makelake.2.in"));
   }
 
 }
