@@ -155,6 +155,14 @@ return 0;
     for(int i = 0; i < 2; i++){
       PointB[i] = puzzle.nextInt();
     }
+    for (int i = 0; i < Length; i++) {
+      for (int j = 0; j < Width; j++) {
+        if (Pasture[i][j] == '*') {
+          copy[i][j] = -1;
+          print[i][j] = copy[i][j];
+      }
+    }
+    }
   }catch(FileNotFoundException e){}
     return CowsPerPath(PointA[0], PointA[1]);
   }
