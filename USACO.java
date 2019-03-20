@@ -150,10 +150,10 @@ return 0;
     }
 
     for(int i = 0; i < 2; i++){
-      PointA[i] = puzzle.nextInt();
+      PointA[i] = puzzle.nextInt() - 1;
     }
     for(int i = 0; i < 2; i++){
-      PointB[i] = puzzle.nextInt();
+      PointB[i] = puzzle.nextInt() - 1;
     }
     for (int i = 0; i < Length; i++) {
       for (int j = 0; j < Width; j++) {
@@ -170,6 +170,8 @@ return 0;
            copy[i][j] = print[i][j];
       }
   }
+  }
+
   }catch(FileNotFoundException e){}
     return CowsPerPath(PointA[0], PointA[1]);
   }
