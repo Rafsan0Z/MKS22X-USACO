@@ -101,7 +101,6 @@ private static boolean inBounds(int r, int c, int length, int width){
     }
   }
   }
-  System.out.println(printArray(field));
   /*for(int o = 0; o < length; o++){
     for(int p = 0; p < width; p++){
       if(field[o][p] >= Elevation){field[o][p] = 0;}
@@ -116,7 +115,6 @@ private static boolean inBounds(int r, int c, int length, int width){
     else{field[i][j] = Elevation - field[i][j];}
     volume += field[i][j];
   }
-  System.out.println(printArray(field[i]));
   }
   return volume*72*72;
 }catch(FileNotFoundException e){
@@ -164,7 +162,7 @@ return 0;
   /* End of Silver Problem */
   // Here is the driver
   public static void main(String[] args){
-    /*try{
+    try{
     for(int i = 1; i <= 5; i++){
       String input = "makelake."+i+".in";
       String output = "makelake."+i+".out";
@@ -177,8 +175,7 @@ return 0;
     }
   }catch(FileNotFoundException e){
     System.out.println("No file!");
-  }*/
-  System.out.println(ProblemBronze("makelake.2.in"));
+  }
   }
 
 }
