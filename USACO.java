@@ -162,9 +162,18 @@ return 0;
     return -1;
   }
 
-  public static void rowcheck(int row, int col, int num2){
+  public static void rowcheck(int row, int col, int Length, int num2){
     if(num >= 0 && num2 >= 0){
+      print[row][col+1] += copy[row][col];
+    }
+  }
+
+  public static void colcheck(int row, int col, int Width, int num, int num2, int[] copy, int[] print){
+    if(col >= 0 && num >= 0){
       print[row+1][col] += copy[row][col];
+    }
+    if(col+2 < Width && num2 >= 0){
+      print[row][col+1] += copy[row][col+2];
     }
   }
 
