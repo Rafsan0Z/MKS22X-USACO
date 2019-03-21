@@ -162,6 +162,12 @@ return 0;
     return -1;
   }
 
+  public static void rowcheck(int row, int col, int num2){
+    if(num >= 0 && num2 >= 0){
+      print[row+1][col] += copy[row][col];
+    }
+  }
+
   public static void main(String[] arg){
     try{
     for(int i = 1; i <= 5; i++){
