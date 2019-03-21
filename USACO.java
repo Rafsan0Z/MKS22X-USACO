@@ -151,7 +151,7 @@ return 0;
           if(print[i][j] > 0){
             print[i][j] = 0;
             rowcheck();
-            colcheck();
+            colcheck(i,j-1,Width,current[i][j-1],current[i][j+2],copy,print);
           }
         }
       }
