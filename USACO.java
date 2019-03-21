@@ -148,7 +148,11 @@ return 0;
   }
       for(int i = 0; i < Length; i++){
         for(int j = 0; j < Width; j++){
-          //Algorithm
+          if(print[i][j] > 0){
+            print[i][j] = 0;
+            rowcheck();
+            colcheck();
+          }
         }
       }
   steps--;
