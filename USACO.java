@@ -150,8 +150,8 @@ return 0;
         for(int j = 0; j < Width; j++){
           if(print[i][j] > 0){
             print[i][j] = 0;
-            rowcheck(i-1,j,Length,current[i-1][j],current[i+2][j],copy,print);
-            colcheck(i,j-1,Width,current[i][j-1],current[i][j+2],copy,print);
+            rowcheck(i-1,j,Length,print[i-1][j],print[i+2][j],copy,print);
+            colcheck(i,j-1,Width,print[i][j-1],print[i][j+2],copy,print);
           }
         }
       }
@@ -162,16 +162,16 @@ return 0;
     return -1;
   }
 
-  public static void rowcheck(int row, int col, int Length, int num, int num2, int[] copy, int[] print){
+  public static void rowcheck(int row, int col, int Length, int num, int num2, int[][] copy, int[][] print){
     if(row >= 0 && num >= 0){
       print[row][col+1] += copy[row][col];
     }
     if(row+2 < Length && num2 >= 0){
-      print[row+1][col] += copy[row2][col];
+      print[row+1][col] += copy[row+2][col];
     }
   }
 
-  public static void colcheck(int row, int col, int Width, int num, int num2, int[] copy, int[] print){
+  public static void colcheck(int row, int col, int Width, int num, int num2, int[][] copy, int[][] print){
     if(col >= 0 && num >= 0){
       print[row+1][col] += copy[row][col];
     }
