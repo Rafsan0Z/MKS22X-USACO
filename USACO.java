@@ -112,11 +112,11 @@ return 0;
     int Length = puzzle.nextInt();
     int Width = puzzle.nextInt();
     int steps = puzzle.nextInt();
-    char[][] Pasture = new char[Length][Width];
-    int[][] copy = new int[Length][Width];
-    int[][] print = new int[Length][Width];
-    int[] PointA = new int[2];
-    int[] PointB = new int[2];
+    char[][] Pasture = new char[Length][Width]; // field of chars
+    int[][] copy = new int[Length][Width]; // copy of the pasture array
+    int[][] print = new int[Length][Width]; // array used to print the result
+    int[] PointA = new int[2]; // Starting Point
+    int[] PointB = new int[2]; // Ending Point
     String strip = puzzle.nextLine();
     for(int i = 0; i < Length; i++){
       strip = puzzle.nextLine();
