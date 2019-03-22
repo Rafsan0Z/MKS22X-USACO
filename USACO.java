@@ -153,7 +153,7 @@ return 0;
       for(int i = 0; i < Length; i++){
         for(int j = 0; j < Width; j++){
           if(Pasture[i][j] != '*'){
-            if(i>=1){
+            if(i>=1 && copy[i-1][j] >= 0){
               print[i][j] += copy[i-1][j];
             }
         }
