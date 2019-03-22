@@ -131,6 +131,10 @@ return 0;
     for(int i = 0; i < 2; i++){
       PointB[i] = puzzle.nextInt() - 1;
     }
+    int startx = PointA[0];
+    int starty = PointB[1];
+    int endx = PointB[0];
+    int endy = PointB[1];
     for (int i = 0; i < Length; i++) {
       for (int j = 0; j < Width; j++) {
         if (Pasture[i][j] == '*') {
@@ -139,7 +143,7 @@ return 0;
       }
     }
     }
-    print[PointA[0]][PointA[1]] = 1;
+    print[startx][starty] = 1;
     while (steps > 0) {
       for (int i = 0; i < Length; i++) {
         for (int j = 0; j < Width; j++) {
@@ -160,8 +164,8 @@ return 0;
         }
       }
   steps--;
-  }
-  return 0;
+}
+  return print[endx][endy];
   }catch(FileNotFoundException e){}
     return -1;
   }
