@@ -156,6 +156,9 @@ return 0;
             if(i>=1 && copy[i-1][j] >= 0){
               print[i][j] += copy[i-1][j];
             }
+            if(j>=1 && copy[i][j-1] >= 0){
+              print[i][j] += copy[i][j-1];
+            }
         }
         }
       }
