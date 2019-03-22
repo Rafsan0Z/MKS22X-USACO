@@ -139,7 +139,7 @@ return 0;
       for (int j = 0; j < Width; j++) {
         if (Pasture[i][j] == '*') {
           print[i][j] = -1;
-          copy[i][j] = -1;
+          copy[i][j] = print[i][j];
       }
     }
     }
@@ -154,10 +154,10 @@ return 0;
         for(int j = 0; j < Width; j++){
           if(print[i][j] > 0){
             print[i][j] = 0;
-            if(i >= 1){
+            if(i >= 1 && i+1 < Length){
             rowcheck(i-1,j,Length,print[i-1][j],print[i+1][j],copy,print);
           }
-            if(j >= 1){
+            if(j >= 1 && j+1 < Width){
             colcheck(i,j-1,Width,print[i][j-1],print[i][j+1],copy,print);
           }
         }
@@ -168,24 +168,6 @@ return 0;
   return print[endx][endy];
   }catch(FileNotFoundException e){}
     return -1;
-  }
-
-  public static void rowcheck(int row, int col, int Length, int num, int num2, int[][] copy, int[][] print){
-    if(num >= 0){
-      print[row][col+1] += copy[row][col];
-    }
-    if(row+2 < Length && num2 >= 0){
-      print[row+1][col] += copy[row+2][col];
-    }
-  }
-
-  public static void colcheck(int row, int col, int Width, int num, int num2, int[][] copy, int[][] print){
-    if(num >= 0){
-      print[row+1][col] += copy[row][col];
-    }
-    if(col+2 < Width && num2 >= 0){
-      print[row][col+1] += copy[row][col+2];
-    }
   }
 
   public static void main(String[] arg){
