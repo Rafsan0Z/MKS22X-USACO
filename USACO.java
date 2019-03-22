@@ -153,13 +153,7 @@ return 0;
       for(int i = 0; i < Length; i++){
         for(int j = 0; j < Width; j++){
           if(print[i][j] > 0){
-            print[i][j] = 0;
-            if(i >= 1 && i+1 < Length){
-            rowcheck(i-1,j,Length,print[i-1][j],print[i+1][j],copy,print);
-          }
-            if(j >= 1 && j+1 < Width){
-            colcheck(i,j-1,Width,print[i][j-1],print[i][j+1],copy,print);
-          }
+            //Algorithm
         }
         }
       }
