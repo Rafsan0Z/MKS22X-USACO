@@ -152,8 +152,10 @@ return 0;
   }
       for(int i = 0; i < Length; i++){
         for(int j = 0; j < Width; j++){
-          if(print[i][j] > 0){
-            //Algorithm
+          if(Pasture[i][j] != '*'){
+            if(i>=1){
+              print[i][j] += copy[i-1][j];
+            }
         }
         }
       }
