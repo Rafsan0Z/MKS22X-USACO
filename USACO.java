@@ -115,26 +115,17 @@ return 0;
     char[][] Pasture = new char[Length][Width]; // field of chars
     int[][] copy = new int[Length][Width]; // copy of the pasture array
     int[][] print = new int[Length][Width]; // array used to print the result
-    int[] PointA = new int[2]; // Starting Point
-    int[] PointB = new int[2]; // Ending Point
     String strip = puzzle.nextLine();
     for(int i = 0; i < Length; i++){
       strip = puzzle.nextLine();
       for(int j = 0; j < Width; j++){
       Pasture[i][j] = strip.charAt(j);
     }
-    }
-
-    for(int i = 0; i < 2; i++){
-      PointA[i] = puzzle.nextInt() - 1;
-    }
-    for(int i = 0; i < 2; i++){
-      PointB[i] = puzzle.nextInt() - 1;
-    }
-    int startx = PointA[0];
-    int starty = PointB[1];
-    int endx = PointB[0];
-    int endy = PointB[1];
+  }
+    int startx = puzzle.nextInt() - 1;
+    int starty = puzzle.nextInt() - 1;
+    int endx = puzzle.nextInt() - 1;
+    int endy = puzzle.nextInt() - 1;
     for (int i = 0; i < Length; i++) {
       for (int j = 0; j < Width; j++) {
         if (Pasture[i][j] == '*') {
