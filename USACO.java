@@ -135,7 +135,7 @@ return 0;
     }
     }
     print[startx][starty] = 1;
-    while (steps > 0) {
+    for(int k = 0; k < stops; k++) {
       for (int i = 0; i < Length; i++) {
         for (int j = 0; j < Width; j++) {
            copy[i][j] = print[i][j];
@@ -144,12 +144,10 @@ return 0;
       for(int i = 0; i < Length; i++){
         for(int j = 0; j < Width; j++){
           if(Pasture[i][j] != '*'){
-            print[i][j] = 0;
 
         }
         }
       }
-  steps--;
 }
   return print[endx][endy];
   }catch(FileNotFoundException e){}
@@ -157,6 +155,7 @@ return 0;
   }
 
   public static void fillSteps(int r, int c, int[] field, int[] nums){
+    field[r][c] = 0;
     if(r>=1 && nums[r-1][c] >= 0){
       field[r][c] += nums[r-1][c];
     }
