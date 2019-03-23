@@ -135,7 +135,7 @@ return 0;
     }
     }
     print[startx][starty] = 1;
-    for(int k = 0; k < stops; k++) {
+    for(int k = 0; k < steps; k++) {
       for (int i = 0; i < Length; i++) {
         for (int j = 0; j < Width; j++) {
            copy[i][j] = print[i][j];
@@ -144,7 +144,7 @@ return 0;
       for(int i = 0; i < Length; i++){
         for(int j = 0; j < Width; j++){
           if(Pasture[i][j] != '*'){
-
+            fillSteps(i,j,print,copy);
         }
         }
       }
@@ -154,7 +154,9 @@ return 0;
     return -1;
   }
 
-  public static void fillSteps(int r, int c, int[] field, int[] nums){
+  public static void fillSteps(int r, int c, int[][] field, int[][] nums){
+    int Length = field.length;
+    int Width = field[r].length;
     field[r][c] = 0;
     if(r>=1 && nums[r-1][c] >= 0){
       field[r][c] += nums[r-1][c];
