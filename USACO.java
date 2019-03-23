@@ -129,8 +129,8 @@ return 0;
     for (int i = 0; i < Length; i++) {
       for (int j = 0; j < Width; j++) {
         if (Pasture[i][j] == '*') {
-          print[i][j] = -1;
-          copy[i][j] = print[i][j];
+          copy[i][j] = -1;
+          print[i][j] = copy[i][j];
       }
     }
     }
@@ -144,6 +144,7 @@ return 0;
       for(int i = 0; i < Length; i++){
         for(int j = 0; j < Width; j++){
           if(Pasture[i][j] != '*'){
+            print[i][j] = 0;
             if(i>=1 && copy[i-1][j] >= 0){
               print[i][j] += copy[i-1][j];
             }
