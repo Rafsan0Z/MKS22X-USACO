@@ -123,33 +123,33 @@ return 0;
     }
   }
     int startx = puzzle.nextInt() - 1;
-    int starty = puzzle.nextInt() - 1;
+    int starty = puzzle.nextInt() - 1; // taking coordinates
     int endx = puzzle.nextInt() - 1;
     int endy = puzzle.nextInt() - 1;
     for (int i = 0; i < Length; i++) {
       for (int j = 0; j < Width; j++) {
         if (Pasture[i][j] == '*') {
           copy[i][j] = -1;
-          print[i][j] = copy[i][j];
+          print[i][j] = copy[i][j]; // Update the copy and print arrays with the pasture array!
       }
     }
     }
     print[startx][starty] = 1;
     for(int k = 0; k < steps; k++) {
       for (int i = 0; i < Length; i++) {
-        for (int j = 0; j < Width; j++) {
+        for (int j = 0; j < Width; j++) {   // making print and copy the same!
            copy[i][j] = print[i][j];
       }
   }
       for(int i = 0; i < Length; i++){
         for(int j = 0; j < Width; j++){
-          if(Pasture[i][j] != '*'){
+          if(Pasture[i][j] != '*'){        // if not blocked by tree, then take a step
             fillSteps(i,j,print,copy);
         }
         }
       }
 }
-  return print[endx][endy];
+  return print[endx][endy]; // print the number at the end position
   }catch(FileNotFoundException e){}
     return -1;
   }
