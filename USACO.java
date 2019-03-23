@@ -145,18 +145,7 @@ return 0;
         for(int j = 0; j < Width; j++){
           if(Pasture[i][j] != '*'){
             print[i][j] = 0;
-            if(i>=1 && copy[i-1][j] >= 0){
-              print[i][j] += copy[i-1][j];
-            }
-            if(j>=1 && copy[i][j-1] >= 0){
-              print[i][j] += copy[i][j-1];
-            }
-            if(i<Length-1 && copy[i+1][j] >= 0){
-              print[i][j] += copy[i+1][j];
-            }
-            if(j<Width-1 && copy[i][j+1] >= 0){
-              print[i][j] += copy[i][j+1];
-            }
+
         }
         }
       }
@@ -165,6 +154,21 @@ return 0;
   return print[endx][endy];
   }catch(FileNotFoundException e){}
     return -1;
+  }
+
+  public static void fillSteps(int r, int c, int[] field, int[] nums){
+    if(r>=1 && nums[r-1][c] >= 0){
+      field[r][c] += nums[r-1][c];
+    }
+    if(c>=1 && nums[r][c-1] >= 0){
+      field[r][c] += nums[r][c-1];
+    }
+    if(r<Length-1 && nums[r+1][c] >= 0){
+      field[r][c] += nums[r+1][c];
+    }
+    if(c<Width-1 && nums[r][c+1] >= 0){
+      field[r][c] += nums[r][c+1];
+    }
   }
 
   public static void main(String[] arg){
