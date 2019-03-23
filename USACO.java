@@ -145,7 +145,7 @@ return 0;
         for(int j = 0; j < Width; j++){
           if(Pasture[i][j] != '*'){        // if not blocked by tree, then take a step
             fillSteps(i,j,print,copy);
-        }
+          }
         }
       }
 }
