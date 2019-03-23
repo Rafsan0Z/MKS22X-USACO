@@ -150,6 +150,12 @@ return 0;
             if(j>=1 && copy[i][j-1] >= 0){
               print[i][j] += copy[i][j-1];
             }
+            if(i<Length-1 && copy[i+1][j] >= 0){
+              print[i][j] += copy[i+1][j];
+            }
+            if(j<Width-1 && copy[i][j+1] >= 0){
+              print[i][j] += copy[i][j+1];
+            }
         }
         }
       }
