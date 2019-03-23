@@ -116,12 +116,7 @@ return 0;
     int[][] copy = new int[Length][Width]; // copy of the pasture array
     int[][] print = new int[Length][Width]; // array used to print the result
     String strip = puzzle.nextLine();
-    for(int i = 0; i < Length; i++){
-      strip = puzzle.nextLine();
-      for(int j = 0; j < Width; j++){
-      Pasture[i][j] = strip.charAt(j);
-    }
-  }
+    takeInputs(puzzle,Pasture);
     int startx = puzzle.nextInt() - 1;
     int starty = puzzle.nextInt() - 1; // taking coordinates
     int endx = puzzle.nextInt() - 1;
@@ -152,6 +147,17 @@ return 0;
   return print[endx][endy]; // print the number at the end position
   }catch(FileNotFoundException e){}
     return -1;
+  }
+
+  public static void takeInputs(Scanner puzzle, int[][] Pasture){
+    int Length = Pasture.length;
+    int Width = Pasture[0].length;
+    for(int i = 0; i < Length; i++){
+      strip = puzzle.nextLine();
+      for(int j = 0; j < Width; j++){
+      Pasture[i][j] = strip.charAt(j);
+    }
+  }
   }
 
   public static void fillSteps(int r, int c, int[][] field, int[][] nums){
