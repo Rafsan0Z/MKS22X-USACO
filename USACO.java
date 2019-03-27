@@ -40,7 +40,7 @@ private static boolean inBounds(int r, int c, int length, int width){
   return false;
 }
 
-  public static int ProblemBronze(String inputFile){
+  public static int bronze(String inputFile){
     int length = 0;
     int width = 0;
     int Elevation = 0;
@@ -105,7 +105,7 @@ return 0;
 }
   }
 
-  public static int ProblemSilver(String inputFile){
+  public static int silver(String inputFile){
     try{
     File text = new File(inputFile);
     Scanner puzzle = new Scanner(text);
@@ -115,7 +115,6 @@ return 0;
     char[][] Pasture = new char[Length][Width]; // field of chars
     int[][] copy = new int[Length][Width]; // copy of the pasture array
     int[][] print = new int[Length][Width]; // array used to print the result
-    String strip = puzzle.nextLine();
     takeInputs(puzzle,Pasture);
     int startx = puzzle.nextInt() - 1;
     int starty = puzzle.nextInt() - 1; // taking coordinates
@@ -149,9 +148,10 @@ return 0;
     return -1;
   }
 
-  public static void takeInputs(Scanner puzzle, int[][] Pasture){
+  public static void takeInputs(Scanner puzzle, char[][] Pasture){
     int Length = Pasture.length;
     int Width = Pasture[0].length;
+    String strip = puzzle.nextLine();
     for(int i = 0; i < Length; i++){
       strip = puzzle.nextLine();
       for(int j = 0; j < Width; j++){
@@ -186,7 +186,7 @@ return 0;
       File test = new File(output);
       Scanner answer = new Scanner(test);
       int compare = answer.nextInt();
-      int num = ProblemBronze(input);
+      int num = bronze(input);
       if(num == compare){System.out.println("Input: " + input+". Result: PASS!");}
       else{System.out.println("Input: " + input+". Result: FAIL! Actual: " + compare/(72*72)+ ". Result: "+num);}
     }
@@ -200,7 +200,7 @@ return 0;
     File test = new File(output);
     Scanner answer = new Scanner(test);
     int compare = answer.nextInt();
-    int num = ProblemSilver(input);
+    int num = silver(input);
     if(num == compare){System.out.println("Input: " + input+". Result: PASS!");}
     else{System.out.println("Input: " + input+". Result: FAIL! Actual: " + compare+ ". Result: "+num);}
   }
